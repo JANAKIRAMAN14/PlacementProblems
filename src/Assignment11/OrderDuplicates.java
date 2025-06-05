@@ -37,14 +37,15 @@ public class OrderDuplicates {
                  dup.add(temp.data);
                  cur.next = temp;
                  cur = cur.next;
-                 temp = temp.next;
             }
+
             temp = temp.next;
         }
+       cur.next = null;
         return res.next;
     }
     public static void main(String[] args) {
-          int [] arr = {1,1,2,2,3,3,3,4,4};
+          int [] arr = {1,1,2,2,3,3,3,4,4,5,5};
 
           Node head = createNode(arr);
           Node head1 = removeDuplicats(head);
