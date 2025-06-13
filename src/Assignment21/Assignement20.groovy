@@ -31,11 +31,11 @@ wordCount.each { k, v ->
 }
 
 // 3
-def words = ["hi", "hello", "bye", "good", "sun"]
+def word = ["hi", "hello", "bye", "good", "sun"]
 def grouped = [:].withDefault { [] }
 
-words.each { word ->
-    grouped[word.length()] << word
+word.each { worde ->
+    grouped[worde.length()] << worde
 }
 
 grouped.each { k, v ->
